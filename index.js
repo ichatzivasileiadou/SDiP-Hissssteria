@@ -12,6 +12,7 @@
 
 import runServer from './server.js';
 import chalk from 'chalk';
+import {manhattan_food} from "./manhattan-food.js"
 
 // info is called when you create your Battlesnake on play.battlesnake.com
 // and controls your Battlesnake's appearance
@@ -21,10 +22,10 @@ function info() {
 
   return {
     apiversion: "1",
-    author: "Hissssteria",       // TODO: Your Battlesnake Username
-    color: "#d9a0e5", // TODO: Choose color
-    head: "all-seeing",  // TODO: Choose head
-    tail: "curled",  // TODO: Choose tail
+    author: "Hissssteria",
+    color: "#d9a0e5", 
+    head: "all-seeing", 
+    tail: "curled",  
   };
 }
 
@@ -120,7 +121,6 @@ function move(gameState) {
     isMoveSafe.up = false;
   }
 
-  // TODO: Step 1 - Prevent your Battlesnake from moving out of bounds
   // boardWidth = gameState.board.width;
   // boardHeight = gameState.board.height;
 
@@ -143,7 +143,6 @@ function move(gameState) {
       isMoveSafe.up = false;          //check top edge
   } 
 
-  // TODO: Step 2 - Prevent your Battlesnake from colliding with itself
   // myBody = gameState.you.body;
 
   // Step 2 - Prevent self-collision (explicit coordinate checks)
@@ -163,7 +162,6 @@ function move(gameState) {
     segment.y === myHead.y - 1 && segment.x === myHead.x
   );
 
-  // TODO: Step 3 - Prevent your Battlesnake from colliding with other Battlesnakes
   // opponents = gameState.board.snakes;
 
   gameState.board.snakes.forEach((snake) => {
@@ -190,7 +188,6 @@ function move(gameState) {
   // Choose a random move from the safe moves
   const nextMove = safeMoves[Math.floor(Math.random() * safeMoves.length)];
 
-  // TODO: Step 4 - Move towards food instead of random, to regain health and survive longer
   // food = gameState.board.food;
 
   console.log(`MOVE ${gameState.turn}: ${nextMove}`)
