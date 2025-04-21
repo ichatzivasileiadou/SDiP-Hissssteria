@@ -18,4 +18,4 @@ function head_to_head_mov(gameState){
     });
     return true;
 }
-export {head_to_head_mov}
+export {head_to_head_mov};
