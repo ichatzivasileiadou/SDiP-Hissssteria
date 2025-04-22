@@ -18,4 +18,4 @@ function manhattan_food(gameState){
     return minimum_food;
 }
 
-export {manhattan_food}
+export {manhattan_food};
