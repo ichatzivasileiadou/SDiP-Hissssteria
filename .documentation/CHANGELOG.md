@@ -44,17 +44,17 @@ Major release the 1.0.0 version, a stable version product with important configu
 
 ### Added 
 
-- Added and configured '.editorconfig' for consistent coding style [#18](https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/18).
-- Adding and configuring prettier to automatically ensure consistant style applying '.prettierignore' for code formatting with 'package.json' reliences 'package-lock.json' auto-generating with 'package-lock.json'[#19](https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/19).
-- Default options to make the configure prettier '.prettierignore' enforcing built-in 'prettierrc.json' deafaults [#20](https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/20).
+- Added and configured '.editorconfig' for consistent coding style ([#18](https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/18)).
+- Adding and configuring prettier to automatically ensure consistant style applying '.prettierignore' for code formatting with 'package.json' reliences 'package-lock.json' auto-generating with 'package-lock.json' ([#19](https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/19)).
+- Default options to make the configure prettier '.prettierignore' enforcing built-in 'prettierrc.json' deafaults ([#20](https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/20)).
 
 
 ## [0.3.0] - 2025-04-18
 
 ### Added 
 
-- Pathfinding the food with Manhattan distance by calculating grid distance assuring that the snake moves towards food and avoides walls successfully 'manhattan-food.js'[#9](https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/9).
-- Head-to-head movement confirms if heading towards the opponent causes a head-to-head collision by evaluating the position and lenghth of the opponent 'head-to-head-mov.js'[#17](https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/17).
+- Pathfinding the food with Manhattan distance by calculating grid distance assuring that the snake moves towards food and avoides walls successfully 'manhattan-food.js' ([#9](https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/9)).
+- Head-to-head movement confirms if heading towards the opponent causes a head-to-head collision by evaluating the position and lenghth of the opponent 'head-to-head-mov.js' ([#17](https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/17)).
 
 - Import the manhatten_food function from file manhatten_food.js to use it in (['index.js'](https://github.com/ichatzivasileiadou/SDiP-Hissssteria/commit/69d9793))
 
@@ -73,8 +73,8 @@ Major release the 1.0.0 version, a stable version product with important configu
 ## [0.1.0] - 2025-04-14
 
 ### Added 
-- Pull request(PR) templated to repository using .github folder to store the specific file '.github/pull-request-template.md' [#7]
-(https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/7).
+- Pull request(PR) templated to repository using .github folder to store the specific file '.github/pull-request-template.md' ([#7]
+(https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/7)).
 - CHANGELOG.md file inside the '.documentation/CHANGELOG.md' folder to keep track of updates ([#8](https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/8)).
  
 
