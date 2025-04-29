@@ -56,10 +56,7 @@ Major release the 1.0.0 version, a stable version product with important configu
 - Pathfinding the food with Manhattan distance by calculating grid distance assuring that the snake moves towards food and avoides walls successfully 'manhattan-food.js'[#9](https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/9).
 - Head-to-head movement confirms if heading towards the opponent causes a head-to-head collision by evaluating the position and lenghth of the opponent 'head-to-head-mov.js'[#17](https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/17).
 
-
-### Added 
-
-Import the manhatten_food function from file manhatten_food.js to use it in (['index.js'](https://github.com/ichatzivasileiadou/SDiP-Hissssteria/commit/69d9793))
+- Import the manhatten_food function from file manhatten_food.js to use it in (['index.js'](https://github.com/ichatzivasileiadou/SDiP-Hissssteria/commit/69d9793))
 
 
 ## [0.2.0] - 2025-04-16
