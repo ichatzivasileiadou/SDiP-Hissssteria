@@ -19,25 +19,25 @@ import {snakes_movement_to_tail} from "./snakes-movement-to-tail.js"
 // and controls your Battlesnake's appearance
 // TIP: If you open your Battlesnake URL in a browser you should see this data
 function info() {
-  console.log("INFO");
+  console.log('INFO');
 
   return {
-    apiversion: "1",
-    author: "Hissssteria",
-    color: "#d9a0e5", 
-    head: "all-seeing", 
-    tail: "curled",  
+    apiversion: '1',
+    author: 'Hissssteria',
+    color: '#d9a0e5', 
+    head: 'all-seeing', 
+    tail: 'curled',  
   };
 }
 
 // start is called when your Battlesnake begins a game
 function start(gameState) {
-  console.log("GAME START");
+  console.log('GAME START');
 }
 
 // end is called when your Battlesnake finishes a game
 function end(gameState) {
-  console.log("GAME OVER\n");
+  console.log('GAME OVER\n');
 }
 
 function printBoard(gameState) {
@@ -183,7 +183,7 @@ function move(gameState) {
   const safeMoves = Object.keys(isMoveSafe).filter(key => isMoveSafe[key]);
   if (safeMoves.length == 0) {
     console.log(`MOVE ${gameState.turn}: No safe moves detected! Moving down`);
-    return { move: "down" };
+    return { move: 'down' };
   }
 
   // Choose a random move from the safe moves
@@ -191,7 +191,7 @@ function move(gameState) {
 
   // food = gameState.board.food;
 
-  console.log(`MOVE ${gameState.turn}: ${nextMove}`)
+  console.log(`MOVE ${gameState.turn}: ${nextMove}`);
   return { move: nextMove };
 }
 
