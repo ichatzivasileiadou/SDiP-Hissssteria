@@ -13,6 +13,7 @@
 import runServer from './server.js';
 import chalk from 'chalk';
 import {manhattan_food} from "./manhattan-food.js"
+import {head_to_head_mov} from "./head-to-head-mov.js"
 import {snakes_movement_to_tail} from "./snakes-movement-to-tail.js"
 
 // info is called when you create your Battlesnake on play.battlesnake.com
