@@ -68,16 +68,16 @@ function snakes_movement_to_tail(gameState){
 
             if (isTail && safeTail) {
                 if(segment.x>myHead.x){
-                    return {move:"right"}
+                    return {move:'right'};
                 }
                 else if(segment.x<myHead.x){
-                    return {move:"left"}
+                    return {move:'left'};
                 }
                 else if(segment.y>myHead.y){
-                    return {move:"up"}
+                    return {move:'up'};
                 }
                 else{
-                    return {move:"down"}
+                    return {move:'down'};
                 }
             }
 
@@ -92,13 +92,13 @@ function snakes_movement_to_tail(gameState){
     const safeMoves = Object.keys(isMoveSafe).filter(key => isMoveSafe[key]);
     if (safeMoves.length === 0) { //if there no safe moves remainin move down
         console.log(`MOVE ${gameState.turn}: No safe moves detected!`);
-        return { move: "down" };
+        return { move: 'down' };
     }else{ //there are safe move
         Object.keys(isMoveSafe).forEach((key)=>{
             if(isMoveSafe[key]==true){
-                return {move:key} //move to the first correct position (up,down,left,right)
+                return {move:key}; //move to the first correct position (up,down,left,right)
             }
-        })
+        });
     }  
 }
-export {snakes_movement_to_tail}
+export {snakes_movement_to_tail};
