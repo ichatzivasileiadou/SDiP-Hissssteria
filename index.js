@@ -15,6 +15,7 @@ import chalk from 'chalk';
 import {manhattan_food} from './manhattan-food.js';
 import {head_to_head_mov} from './head-to-head-mov.js';
 import {snakes_movement_to_tail} from './snakes-movement-to-tail.js';
+import floodFill from './floodFill/floodFill.js';
 
 // info is called when you create your Battlesnake on play.battlesnake.com
 // and controls your Battlesnake's appearance
@@ -94,6 +95,7 @@ function printBoard(gameState) {
 // move is called on every turn and returns your next move
 // Valid moves are "up", "down", "left", or "right"
 // See https://docs.battlesnake.com/api/example-move for available data
+
 function move(gameState) {
 
   console.log(gameState); 
@@ -187,14 +189,56 @@ function move(gameState) {
     return { move: 'down' };
   }
 
-  // Choose a random move from the safe moves
-  const nextMove = safeMoves[Math.floor(Math.random() * safeMoves.length)];
+ // Use flood fill to choose the move with the most reachable space
+   function cloneBoard(gameState) {
+     const { width, height } = gameState.board;
+     const board = Array.from({ length: height }, () => Array(width).fill(0));
+     gameState.board.snakes.forEach(snake => {
+       snake.body.forEach(segment => {
+         board[segment.y][segment.x] = 1;
+       });
+     });
+     return board;
+   }
+ 
+   const directions = {
+     up: { x: 0, y: 1 },
+     down: { x: 0, y: -1 },
+     left: { x: -1, y: 0 },
+     right: { x: 1, y: 0 }
+   };
+ 
+   let bestMove = null;
+   let bestScore = -1;
+ 
+   safeMoves.forEach(move => {
+     const offset = directions[move];
+     const newX = myHead.x + offset.x;
+     const newY = myHead.y + offset.y;
+ 
+     if (newX < 0 || newX >= boardWidth || newY < 0 || newY >= boardHeight) return;
+ 
+     const testGrid = cloneBoard(gameState);
+ 
+     if (testGrid[newY][newX] !== 0) return;
+ 
+     const score = floodFill(testGrid, newX, newY, 2);
+ 
+     if (score > bestScore) {
+       bestScore = score;
+       bestMove = move;
+     }
+   });
+ 
+   if (!bestMove) {
+     bestMove = safeMoves[0];
+   }
+ 
+   console.log(`MOVE ${gameState.turn}: ${bestMove} (flood fill score: ${bestScore})`);
+   return { move: bestMove };
+ 
+ }
 
-  // food = gameState.board.food;
-
-  console.log(`MOVE ${gameState.turn}: ${nextMove}`);
-  return { move: nextMove };
-}
 
 runServer({
   info: info,
