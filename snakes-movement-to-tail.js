@@ -67,18 +67,8 @@ function snakes_movement_to_tail(gameState){
             // Skip checking this segment if it's the tail and considered safe
 
             if (isTail && safeTail) {
-                if(segment.x>myHead.x){
-                    return {move:'right'};
-                }
-                else if(segment.x<myHead.x){
-                    return {move:'left'};
-                }
-                else if(segment.y>myHead.y){
-                    return {move:'up'};
-                }
-                else{
-                    return {move:'down'};
-                }
+                // Can make movement 
+                return;
             }
 
             if (segment.x === myHead.x && segment.y === myHead.y + 1) isMoveSafe.up = false;
@@ -93,12 +83,12 @@ function snakes_movement_to_tail(gameState){
     if (safeMoves.length === 0) { //if there no safe moves remainin move down
         console.log(`MOVE ${gameState.turn}: No safe moves detected!`);
         return { move: 'down' };
-    }else{ //there are safe move
-        Object.keys(isMoveSafe).forEach((key)=>{
-            if(isMoveSafe[key]==true){
-                return {move:key}; //move to the first correct position (up,down,left,right)
+    }
+    for(const move of ['up', 'down', 'left','right']){ //there are safe move
+            if(isMoveSafe[move]==true){
+                return {move}; //move to the first correct position (up,down,left,right)
             }
-        });
+        }
+        return {move :'down'}
     }  
-}
-export {snakes_movement_to_tail};
+export default snakes_movement_to_tail;

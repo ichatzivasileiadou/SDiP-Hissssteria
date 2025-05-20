@@ -2,6 +2,9 @@
      * Calculates the manhattan distance between snake's head and each food,
      * Finds the minimum manhattan distance and return the food that is in the minimum distance. 
 */
+import chalk from 'chalk';
+// By importing chalk we can use its funtions
+//  to add colors and style 
 
 function manhattan_food(gameState){
     const myHead = gameState.you.body[0];
@@ -12,10 +15,11 @@ function manhattan_food(gameState){
         let manhattan_distance=Math.abs(myHead.x-food.x)+Math.abs(myHead.y-food.y); //The difference of the absolute values ​​of x plus the difference of the absolute values ​​of y of the two points(The head and each food are the two points)
         if(manhattan_distance<minimum_distance){
             minimum_food=food;
+            minimum_distance=manhattan_distance; 
         }
     });
 
     return minimum_food;
 }
 
-export {manhattan_food};
+export default manhattan_food;
