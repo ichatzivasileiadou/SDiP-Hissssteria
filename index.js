@@ -24,9 +24,9 @@ function info() {
   return {
     apiversion: '1',
     author: 'Hissssteria',
-    color: '#d9a0e5', 
+    color: '#25094a', 
     head: 'all-seeing', 
-    tail: 'curled',  
+    tail: 'cosmic-horror',  
   };
 }
 
