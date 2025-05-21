@@ -8,6 +8,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2025-05-21
+
+## Added
+
+Minor release the 1.1.0 version - This release 
+introduces new features, improvement, test coverage and a hotfix.
+
+- Snake Movement Rules: Snakes can move safely into position occupied by the opponent's tail.[#41](https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/41).
+- Added Jest testing framework for code quality and efficiency [#42](https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/42).
+-Added Flood Fill alorithm using Test Driven Development(TDD) to make the snake choose the next move [#43] (https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/43).
+- Reaching at least 50% coverage of the project with automatic testing 'No need for TDD' [#44] (https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/44).
+- Hotfix customised with a simple change as part of the hotfix process [#45] (https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/45).
+- Minor Release [#46] (https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/46).
+
+## Changed
+
+- Previous functions such as: `manhattan-distnaced`, `head-to-head-mov.js` and 
+`snakes-movement-to-tail.js` in ['9fff3f6'] (https://github.com/ichatzivasileiadou/SDiP-Hissssteria/commit/9fff3f62ae06d5367b8f455aba4a96d7f1850403) to enhance Jest testing performance and optimise code usability.
+- Version bumped from 1.0.0 - 1.1.0 in ['package.json'](https://github.com/ichatzivasileiadou/SDiP-Hissssteria/blob/develop/package.json).
+
+## Fixed
+- Backport hotfix v1.0.1 to develop [#52](https://github.com/ichatzivasileiadou/SDiP-Hissssteria/commit/677d3ec9f75ab0d70e811555e8cc6f24991ee210).
+
+
 ## [1.0.0] - 2025-04-30
 
 ### Added 
@@ -88,7 +112,8 @@ Major release the 1.0.0 version, a stable version product with important configu
 
 <!-- Compare Version Releases Links -->
 
-[unreleased]: https://github.com/ichatzivasileiadou/SDiP-Hissssteria/compare/v1.0.0...HEAD
+[unreleased]: https://github.com/ichatzivasileiadou/SDiP-Hissssteria/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/ichatzivasileiadou/SDiP-Hissssteria/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/ichatzivasileiadou/SDiP-Hissssteria/compare/v0.5.0...v1.0.0
 [0.5.0]: https://github.com/ichatzivasileiadou/SDiP-Hissssteria/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/ichatzivasileiadou/SDiP-Hissssteria/compare/v0.3.0...v0.4.0
