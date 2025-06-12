@@ -1,6 +1,19 @@
 /**
      * Calculates the manhattan distance between snake's head and each food,
      * Finds the minimum manhattan distance and return the food that is in the minimum distance. 
+     * @function manhattan_distance
+     * @import {chalk} from 'chalk' - styles game functions
+     * @param {Object} gameState - Game state current object
+     * @param {Object} game.you - Details of our snake
+     * @param {Array.<{x: number, y:number}>} - Coorditates of snakes body - gameState.you.body
+     * @return {{x: number, y:number}|null} - Either closest food object or null if no food id found
+     * @example 
+     * Returns the closest food to the snake's head using Manhattan distance:
+     * const gameState = {
+     *  you: {body: [{x:0 , y:0}] },
+     *  board: {food: [{x:1 , y:1}, {x:5 , y:5}] }
+     * });
+     * // Return: {x:1 , y:1}
 */
 import chalk from 'chalk';
 // By importing chalk we can use its funtions
