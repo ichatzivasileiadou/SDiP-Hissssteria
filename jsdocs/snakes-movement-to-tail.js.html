@@ -1,4 +1,32 @@
-/**
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: snakes-movement-to-tail.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: snakes-movement-to-tail.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
     * These logic parts of the game represent the complete game state for
     * snake battlegame. Its purpose is to determine the safest
     * evaluting potential moves(up,down,left,right) to another snake tail.
@@ -7,12 +35,12 @@
     * Starting by representing snake state with board info.
     * @typedef {Object} GameState - Defines the game state properties.
     * @property {Object} you - Details about our snake .
-    * @property {Array.<{x:number, y: number}>} you.body - Snakes body segment cooordinate.
+    * @property {Array.&lt;{x:number, y: number}>} you.body - Snakes body segment cooordinate.
     * @property {Object} board - Information about the game board.
     * @property {Object} board.width - The width of the game board.
     * @property {Object} board.height - The height of the game board.
-    * @property {Array.<Object>} board.snakes - All snakes on the board array.
-    * @property {Array.<{x:number, y: number}>} board.food - All food items coordinates.
+    * @property {Array.&lt;Object>} board.snakes - All snakes on the board array.
+    * @property {Array.&lt;{x:number, y: number}>} board.food - All food items coordinates.
     * @property {number} turn - The current number track, if no safe move, turn. 
     * 
     * Initializes a snake in the game.
@@ -22,7 +50,7 @@
     * 
     * Checks for tail safety 
     * @param {Snake} snake - Check the opponent snake
-    * @param {Array<Food>} food - All food position on the board
+    * @param {Array&lt;Food>} food - All food position on the board
     * @returns {{x: number, y: number}|null} - the tail cordinates if safe,
     * if not, otherwise return null.
     * 
@@ -36,7 +64,7 @@
 //  Checks if a tail of onother snake is safe
 function isTailSafe(snake, food) {
     const tail = snake.body[snake.body.length - 1];
-    const willEat = food.some(f => f.x === snake.body[0].x && f.y === snake.body[0].y);
+    const willEat = food.some(f => f.x === snake.body[0].x &amp;&amp; f.y === snake.body[0].y);
     // If the snake is NOT eating, its tail will move away (safe to move into)
     return !willEat ? tail : null;
 }
@@ -63,11 +91,11 @@ function snakes_movement_to_tail(gameState){
     const food = gameState.board.food;
 
     // Avoid moving backwards (we are trying to avoid collision between the head and the neck of my snake)
-    if (myNeck.x < myHead.x) {
+    if (myNeck.x &lt; myHead.x) {
         isMoveSafe.left = false;
     } else if (myNeck.x > myHead.x) {
         isMoveSafe.right = false;
-    } else if (myNeck.y < myHead.y) {
+    } else if (myNeck.y &lt; myHead.y) {
         isMoveSafe.down = false;
     } else if (myNeck.y > myHead.y) {
         isMoveSafe.up = false;
@@ -82,10 +110,10 @@ function snakes_movement_to_tail(gameState){
 
     // Avoid self collision
     myBody.forEach(segment => {
-        if (segment.x === myHead.x && segment.y === myHead.y + 1) isMoveSafe.up = false;
-        if (segment.x === myHead.x && segment.y === myHead.y - 1) isMoveSafe.down = false;
-        if (segment.x === myHead.x - 1 && segment.y === myHead.y) isMoveSafe.left = false;
-        if (segment.x === myHead.x + 1 && segment.y === myHead.y) isMoveSafe.right = false;
+        if (segment.x === myHead.x &amp;&amp; segment.y === myHead.y + 1) isMoveSafe.up = false;
+        if (segment.x === myHead.x &amp;&amp; segment.y === myHead.y - 1) isMoveSafe.down = false;
+        if (segment.x === myHead.x - 1 &amp;&amp; segment.y === myHead.y) isMoveSafe.left = false;
+        if (segment.x === myHead.x + 1 &amp;&amp; segment.y === myHead.y) isMoveSafe.right = false;
     });
 
 
@@ -98,15 +126,15 @@ function snakes_movement_to_tail(gameState){
 
             // Skip checking this segment if it's the tail and considered safe
 
-            if (isTail && safeTail) {
+            if (isTail &amp;&amp; safeTail) {
                 // Can make movement 
                 return;
             }
 
-            if (segment.x === myHead.x && segment.y === myHead.y + 1) isMoveSafe.up = false;
-            if (segment.x === myHead.x && segment.y === myHead.y - 1) isMoveSafe.down = false;
-            if (segment.x === myHead.x - 1 && segment.y === myHead.y) isMoveSafe.left = false;
-            if (segment.x === myHead.x + 1 && segment.y === myHead.y) isMoveSafe.right = false;
+            if (segment.x === myHead.x &amp;&amp; segment.y === myHead.y + 1) isMoveSafe.up = false;
+            if (segment.x === myHead.x &amp;&amp; segment.y === myHead.y - 1) isMoveSafe.down = false;
+            if (segment.x === myHead.x - 1 &amp;&amp; segment.y === myHead.y) isMoveSafe.left = false;
+            if (segment.x === myHead.x + 1 &amp;&amp; segment.y === myHead.y) isMoveSafe.right = false;
         });
     });
 
@@ -123,4 +151,26 @@ function snakes_movement_to_tail(gameState){
         }
         return {move :'down'}
     }  
-export default snakes_movement_to_tail;
+export default snakes_movement_to_tail;</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#floodFill">floodFill</a></li><li><a href="global.html#manhattan_distance">manhattan_distance</a></li><li><a href="global.html#snakes_movement_to_tail">snakes_movement_to_tail</a></li><li><a href="global.html#sum">sum</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Thu Jun 12 2025 16:27:15 GMT+0300 (Ora verore e Evropës Lindore)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

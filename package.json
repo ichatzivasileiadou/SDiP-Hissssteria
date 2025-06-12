@@ -11,8 +11,10 @@
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "test:cov":"npm test -- --coverage",
-    "test:watch": "npm test -- --watch"
+    "test:cov": "npm test -- --coverage",
+    "test:watch": "npm test -- --watch",
+    "docs": "npm jsdoc -r index.js floodFill/floodFill.js head-to-head-mov.js manhattan-food.js snakes-movement-to-tail.js sum.js -d  jsdocs",
+    "docs-config": "npx jsdoc -c jsdoc.config.json -r"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,8 @@
   },
   "dependencies": {
     "express": "^4.20.0",
+    "jsdoc": "^4.0.4",
+    "save-dev": "^0.0.1-security",
     "starter-snake-javascript": "file:"
   },
   "devDependencies": {

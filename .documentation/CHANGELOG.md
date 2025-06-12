@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## Added 
+- JSDoc markup language code documentation to instuct operations that annotate our code and alleviate any possibe inconsistencies. Additionaly, we generated an html documentation page for each logical function, inside the folder (`/jsdocs`) to autometically display and organize the code's structure including description. [#56](https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/56). 
+- JSDoc configuration (`jsdoc.config.json`) to enforce documentation standards and autogenerate (`/jsdocs`) .
+
+
 ## [1.1.0] - 2025-05-21
 
 ## Added
@@ -17,7 +22,7 @@ introduces new features, improvement, test coverage and a hotfix.
 
 - Snake Movement Rules: Snakes can move safely into position occupied by the opponent's tail.[#41](https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/41).
 - Added Jest testing framework for code quality and efficiency [#42](https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/42).
--Added Flood Fill alorithm using Test Driven Development(TDD) to make the snake choose the next move [#43] (https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/43).
+- Added Flood Fill alorithm using Test Driven Development(TDD) to make the snake choose the next move [#43] (https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/43).
 - Reaching at least 50% coverage of the project with automatic testing 'No need for TDD' [#44] (https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/44).
 - Hotfix customised with a simple change as part of the hotfix process [#45] (https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/45).
 - Minor Release [#46] (https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/46).
@@ -25,7 +30,7 @@ introduces new features, improvement, test coverage and a hotfix.
 ## Changed
 
 - Previous functions such as: `manhattan-distnaced`, `head-to-head-mov.js` and 
-`snakes-movement-to-tail.js` in ['9fff3f6'] (https://github.com/ichatzivasileiadou/SDiP-Hissssteria/commit/9fff3f62ae06d5367b8f455aba4a96d7f1850403) to enhance Jest testing performance and optimise code usability.
+`snakes-movement-to-tail.js` in (['9fff3f6'] (https://github.com/ichatzivasileiadou/SDiP-Hissssteria/commit/9fff3f62ae06d5367b8f455aba4a96d7f1850403)) to enhance Jest testing performance and optimise code usability.
 - Version bumped from 1.0.0 - 1.1.0 in ['package.json'](https://github.com/ichatzivasileiadou/SDiP-Hissssteria/blob/develop/package.json).
 
 ## Fixed
