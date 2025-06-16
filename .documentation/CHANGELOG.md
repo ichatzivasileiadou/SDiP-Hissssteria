@@ -9,9 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## Added 
-- JSDoc markup language code documentation to instuct operations that annotate our code and alleviate any possibe inconsistencies. Additionaly, we generated an html documentation page for each logical function, inside the folder (`/jsdocs`) to autometically display and organize the code's structure including description. [#56](https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/56). 
-- JSDoc configuration (`jsdoc.config.json`) to enforce documentation standards and autogenerate (`/jsdocs`) .
-
+- JSDoc markup language code documentation to instuct operations that annotate our code and alleviate any possibe inconsistencies. Additionaly, we generated an html documentation page for each logical function, inside the folder (`jsdocs/`) to autometically display and organize the code's structure including description [#56](https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/56). 
+- JSDoc configuration (`jsdoc.config.json`) to enforce documentation standards and autogenerate (`jsdocs/`) .
+- Updated the README.md by adding relavant documentation required for the project's system documentation. [#57](https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/57).
+- Snake can hunt smaller snakes and kill them. [#58](https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/58). 
 
 ## [1.1.0] - 2025-05-21
 
