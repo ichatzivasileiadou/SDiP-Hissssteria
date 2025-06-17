@@ -10,6 +10,7 @@ jobs:
     permissions:
       checks: write  # Grant write permission for checks API
       contents: read
+      pull-requests: write
     steps:
       - uses: actions/checkout@v3
       - uses: ArtiomTr/jest-coverage-report-action@v2
