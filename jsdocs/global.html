@@ -104,265 +104,6 @@
     
 
     
-    <h4 class="name" id="floodFill"><span class="type-signature"></span>floodFill<span class="signature">(grid, x, y, colorTarget, newColor)</span><span class="type-signature"> &rarr; {Array.&lt;Array.&lt;number>>}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    The Flood fill performs operations on a 2D grid beginning with (x,y) coordinates.Does the changes of all connected same-color cells tonew colors and returns the number of cells changed, using Depth-First Search (DFS).Returns 0 in case if the new color matches the original one.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>grid</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array.&lt;Array.&lt;(number|string)>></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">element represntation of a colorwith 2D array.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>x</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The initial column index (x-coordinate).</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>y</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The initial row index (y-coordinate).</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>colorTarget</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The color value we want to replace</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>newColor</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-|
-
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The new color value to replacee the original region with.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="floodFill_floodFill.js.html">floodFill/floodFill.js</a>, <a href="floodFill_floodFill.js.html#line34">line 34</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    - The number of cells that were changed during the operation.
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Array.&lt;Array.&lt;number>></span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>// Given the grid below: const grid = [    [1, 1, 0],    [1, 0, 1],      [0, 1, 1]   ];// Calling floodFill(grid, 0, 0, 2) does the change of theregion of 1s starting at (0,0) to 2 and returns the count of cells 3.// usage demonstationconst changedCount = floodFill(grid, 0, 0, 2);console.log(changedCount); The return: 3</code></pre>
-
-
-
-        
-            
-
-    
-
-    
     <h4 class="name" id="manhattan_distance"><span class="type-signature"></span>manhattan_distance<span class="signature">(gameState)</span><span class="type-signature"> &rarr; {Object|null}</span></h4>
     
 
@@ -371,7 +112,8 @@
 
 
 <div class="description">
-    Calculates the manhattan distance between snake's head and each food,Finds the minimum manhattan distance and return the food that is in the minimum distance.
+    <p>Calculates the manhattan distance between snake's head and each food,
+Finds the minimum manhattan distance and return the food that is in the minimum distance.</p>
 </div>
 
 
@@ -423,7 +165,7 @@
 
             
 
-            <td class="description last">Game state current object</td>
+            <td class="description last"><p>Game state current object</p></td>
         </tr>
 
     
@@ -446,7 +188,7 @@
 
             
 
-            <td class="description last">Details of our snake</td>
+            <td class="description last"><p>Details of our snake</p></td>
         </tr>
 
     
@@ -469,7 +211,7 @@
 
             
 
-            <td class="description last">Coorditates of snakes body - gameState.you.body</td>
+            <td class="description last"><p>Coorditates of snakes body - gameState.you.body</p></td>
         </tr>
 
     
@@ -508,11 +250,6 @@
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="manhattan-food.js.html">manhattan-food.js</a>, <a href="manhattan-food.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
 
     
 
@@ -539,7 +276,9 @@
 
         
 <div class="param-desc">
-    - Either closest food object or null if no food id found
+    <ul>
+<li>Either closest food object or null if no food id found</li>
+</ul>
 </div>
 
 
@@ -584,7 +323,9 @@
 
 
 <div class="description">
-    Checks if my snake can move to a tail of another snake. if not returns a safe move.if there is no safe move returns that the move is "down"returns a json with key move and value the diraction (right,up,left,down)
+    <p>Checks if my snake can move to a tail of another snake. if not returns a safe move.
+if there is no safe move returns that the move is &quot;down&quot;
+returns a json with key move and value the diraction (right,up,left,down)</p>
 </div>
 
 
@@ -625,11 +366,6 @@
 
     
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="snakes-movement-to-tail.js.html">snakes-movement-to-tail.js</a>, <a href="snakes-movement-to-tail.js.html#line49">line 49</a>
-    </li></ul></dd>
     
 
     
@@ -672,7 +408,7 @@
 
 
 <div class="description">
-    The sum calculation of two numbers.
+    <p>The sum calculation of two numbers.</p>
 </div>
 
 
@@ -724,7 +460,7 @@
 
             
 
-            <td class="description last">1st number</td>
+            <td class="description last"><p>1st number</p></td>
         </tr>
 
     
@@ -747,7 +483,7 @@
 
             
 
-            <td class="description last">2nd number</td>
+            <td class="description last"><p>2nd number</p></td>
         </tr>
 
     
@@ -786,11 +522,6 @@
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="sum.js.html">sum.js</a>, <a href="sum.js.html#line7">line 7</a>
-    </li></ul></dd>
-    
 
     
 
@@ -817,7 +548,9 @@
 
         
 <div class="param-desc">
-    - sum of both a and b
+    <ul>
+<li>sum of both a and b</li>
+</ul>
 </div>
 
 
@@ -854,7 +587,7 @@
 
 
 <div class="description">
-    Main module game implementation of the BatttelSnake
+    <p>Main module game implementation of the BatttelSnake</p>
 </div>
 
 
@@ -915,7 +648,7 @@
 
             
 
-            <td class="description last">API version of the Battelsnake game</td>
+            <td class="description last"><p>API version of the Battelsnake game</p></td>
         </tr>
 
     
@@ -938,7 +671,7 @@
 
             
 
-            <td class="description last">Name of the auther</td>
+            <td class="description last"><p>Name of the auther</p></td>
         </tr>
 
     
@@ -961,7 +694,7 @@
 
             
 
-            <td class="description last">The color (Hex:"25094a")</td>
+            <td class="description last"><p>The color (Hex:&quot;25094a&quot;)</p></td>
         </tr>
 
     
@@ -984,7 +717,7 @@
 
             
 
-            <td class="description last">Head apperance type ("all-seeing")</td>
+            <td class="description last"><p>Head apperance type (&quot;all-seeing&quot;)</p></td>
         </tr>
 
     
@@ -1007,7 +740,8 @@
 
             
 
-            <td class="description last">Head apperance type ("cosmic-horror")Beggining or "start" called of a new game</td>
+            <td class="description last"><p>Head apperance type (&quot;cosmic-horror&quot;)</p>
+<p>Beggining or &quot;start&quot; called of a new game</p></td>
         </tr>
 
     
@@ -1030,7 +764,8 @@
 
             
 
-            <td class="description last">Direction ("up","down","left","right")Clone the board to analyis flood-fill</td>
+            <td class="description last"><p>Direction (&quot;up&quot;,&quot;down&quot;,&quot;left&quot;,&quot;right&quot;)</p>
+<p>Clone the board to analyis flood-fill</p></td>
         </tr>
 
     
@@ -1053,7 +788,7 @@
 
             
 
-            <td class="description last">Metadate of snake</td>
+            <td class="description last"><p>Metadate of snake</p></td>
         </tr>
 
     
@@ -1076,7 +811,7 @@
 
             
 
-            <td class="description last">Handler of game start</td>
+            <td class="description last"><p>Handler of game start</p></td>
         </tr>
 
     
@@ -1099,7 +834,7 @@
 
             
 
-            <td class="description last">Movement logic</td>
+            <td class="description last"><p>Movement logic</p></td>
         </tr>
 
     
@@ -1122,7 +857,7 @@
 
             
 
-            <td class="description last">Handler of game end</td>
+            <td class="description last"><p>Handler of game end</p></td>
         </tr>
 
     
@@ -1169,11 +904,6 @@
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line12">line 12</a>
-    </li></ul></dd>
-    
 
     
 
@@ -1202,7 +932,9 @@
 
 
 <div class="description">
-    Checks if my snake is close with other snakes, and if it is, we check that our length is bigger than them.Returns true if there is no snake nearby, and if there is if our snakes length is bigger that the enemys length.Returns false if there is a snake nearby and their length is >= than our snake.
+    <p>Checks if my snake is close with other snakes, and if it is, we check that our length is bigger than them.
+Returns true if there is no snake nearby, and if there is if our snakes length is bigger that the enemys length.
+Returns false if there is a snake nearby and their length is &gt;= than our snake.</p>
 </div>
 
 
@@ -1263,7 +995,7 @@
 
             
 
-            <td class="description last">The x- coordinate of the game board.</td>
+            <td class="description last"><p>The x- coordinate of the game board.</p></td>
         </tr>
 
     
@@ -1286,7 +1018,7 @@
 
             
 
-            <td class="description last">The y- coordinate of the game board.</td>
+            <td class="description last"><p>The y- coordinate of the game board.</p></td>
         </tr>
 
     
@@ -1309,7 +1041,7 @@
 
             
 
-            <td class="description last">Array position of snake's body segments(head at index 0).</td>
+            <td class="description last"><p>Array position of snake's body segments(head at index 0).</p></td>
         </tr>
 
     
@@ -1332,7 +1064,7 @@
 
             
 
-            <td class="description last">The full length of the snake.</td>
+            <td class="description last"><p>The full length of the snake.</p></td>
         </tr>
 
     
@@ -1355,7 +1087,7 @@
 
             
 
-            <td class="description last">The total array of all snkes on the board.</td>
+            <td class="description last"><p>The total array of all snkes on the board.</p></td>
         </tr>
 
     
@@ -1378,7 +1110,7 @@
 
             
 
-            <td class="description last">Our snake body segments.</td>
+            <td class="description last"><p>Our snake body segments.</p></td>
         </tr>
 
     
@@ -1401,7 +1133,7 @@
 
             
 
-            <td class="description last">Our snake body length.</td>
+            <td class="description last"><p>Our snake body length.</p></td>
         </tr>
 
     
@@ -1424,7 +1156,7 @@
 
             
 
-            <td class="description last">Board current state.</td>
+            <td class="description last"><p>Board current state.</p></td>
         </tr>
 
     
@@ -1447,7 +1179,7 @@
 
             
 
-            <td class="description last">Our snake's current state.</td>
+            <td class="description last"><p>Our snake's current state.</p></td>
         </tr>
 
     
@@ -1484,11 +1216,6 @@
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="head-to-head-mov.js.html">head-to-head-mov.js</a>, <a href="head-to-head-mov.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
 
     
 
@@ -1510,7 +1237,11 @@
 
 
 <div class="description">
-    These logic parts of the game represent the complete game state forsnake battlegame. Its purpose is to determine the safestevaluting potential moves(up,down,left,right) to another snake tail.It incudes all snakes, board dimenstion and food position.Starting by representing snake state with board info.
+    <p>These logic parts of the game represent the complete game state for
+snake battlegame. Its purpose is to determine the safest
+evaluting potential moves(up,down,left,right) to another snake tail.
+It incudes all snakes, board dimenstion and food position.</p>
+<p>Starting by representing snake state with board info.</p>
 </div>
 
 
@@ -1571,7 +1302,7 @@
 
             
 
-            <td class="description last">Details about our snake .
+            <td class="description last"><p>Details about our snake .</p>
                 <h6>Properties</h6>
 
 <table class="props">
@@ -1612,7 +1343,7 @@
 
             
 
-            <td class="description last">Snakes body segment cooordinate.</td>
+            <td class="description last"><p>Snakes body segment cooordinate.</p></td>
         </tr>
 
     
@@ -1642,7 +1373,7 @@
 
             
 
-            <td class="description last">Information about the game board.
+            <td class="description last"><p>Information about the game board.</p>
                 <h6>Properties</h6>
 
 <table class="props">
@@ -1683,7 +1414,7 @@
 
             
 
-            <td class="description last">The width of the game board.</td>
+            <td class="description last"><p>The width of the game board.</p></td>
         </tr>
 
     
@@ -1706,7 +1437,7 @@
 
             
 
-            <td class="description last">The height of the game board.</td>
+            <td class="description last"><p>The height of the game board.</p></td>
         </tr>
 
     
@@ -1729,7 +1460,7 @@
 
             
 
-            <td class="description last">All snakes on the board array.</td>
+            <td class="description last"><p>All snakes on the board array.</p></td>
         </tr>
 
     
@@ -1752,7 +1483,7 @@
 
             
 
-            <td class="description last">All food items coordinates.</td>
+            <td class="description last"><p>All food items coordinates.</p></td>
         </tr>
 
     
@@ -1782,7 +1513,8 @@
 
             
 
-            <td class="description last">The current number track, if no safe move, turn. Initializes a snake in the game.</td>
+            <td class="description last"><p>The current number track, if no safe move, turn.</p>
+<p>Initializes a snake in the game.</p></td>
         </tr>
 
     
@@ -1805,7 +1537,7 @@
 
             
 
-            <td class="description last">The x- coordinate of the food.</td>
+            <td class="description last"><p>The x- coordinate of the food.</p></td>
         </tr>
 
     
@@ -1828,7 +1560,8 @@
 
             
 
-            <td class="description last">The x- coordinate of the food.Checks for tail safety</td>
+            <td class="description last"><p>The x- coordinate of the food.</p>
+<p>Checks for tail safety</p></td>
         </tr>
 
     
@@ -1865,11 +1598,6 @@
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="snakes-movement-to-tail.js.html">snakes-movement-to-tail.js</a>, <a href="snakes-movement-to-tail.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
 
     
 
@@ -1897,13 +1625,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#floodFill">floodFill</a></li><li><a href="global.html#manhattan_distance">manhattan_distance</a></li><li><a href="global.html#snakes_movement_to_tail">snakes_movement_to_tail</a></li><li><a href="global.html#sum">sum</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-snakeStrategies.html">snakeStrategies</a></li><li><a href="module-snakeStrategiess.html">snakeStrategiess</a></li></ul><h3>Global</h3><ul><li><a href="global.html#manhattan_distance">manhattan_distance</a></li><li><a href="global.html#snakes_movement_to_tail">snakes_movement_to_tail</a></li><li><a href="global.html#sum">sum</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Thu Jun 12 2025 16:27:15 GMT+0300 (Ora verore e Evropës Lindore)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Tue Jun 17 2025 21:45:14 GMT+0300 (Ora verore e Evropës Lindore)
 </footer>
 
 <script> prettyPrint(); </script>

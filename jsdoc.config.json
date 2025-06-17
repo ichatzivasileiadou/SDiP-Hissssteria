@@ -8,22 +8,23 @@
       "head-to-head-mov.js",
       "manhattan-food.js",
       "snakes-movement-to-tail.js",
+      "kill-small-snakes.js",
       "sum.js"
     ],
     "includePattern": ".+\\.js(doc|x)?$",
-    "excludePattern": "(^|\\/|\\\\)_"
+    "excludePattern": "" 
   },
   "opts": {
     "destination": "jsdocs/",
     "encoding": "utf8",
-    "recurse": true,   
+    "recurse": false,   
     "verbose": true
   },
   "templates": {
     "cleverLinks": true,
     "monospaceLinks": true,
     "default": {
-      "outputSourceFiles": true
+      "outputSourceFiles": false
     }
   }
 }

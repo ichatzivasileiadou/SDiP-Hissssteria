@@ -1,11 +1,16 @@
 /**
+ * @file Provides functions for snake game strategy focusing on targeting smaller snakes.
+ * @module snakeStrategiess
+ */
+
+/**
      * The Flood fill performs operations on a 2D grid 
      * beginning with (x,y) coordinates.
      * Does the changes of all connected same-color cells to
      * new colors and returns the number of cells changed, using 
      * Depth-First Search (DFS).
      * Returns 0 in case if the new color matches the original one.
-     *  
+     * @function floodFill 
      * @param {Array.<Array<number|string>>} grid - element represntation of a color
      * with 2D array.
      * @param {number} x - The initial column index (x-coordinate).
