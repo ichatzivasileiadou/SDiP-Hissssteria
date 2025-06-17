@@ -2,7 +2,6 @@
      * Calculates the manhattan distance between snake's head and each food,
      * Finds the minimum manhattan distance and return the food that is in the minimum distance. 
      * @function manhattan_distance
-     * @import {chalk} from 'chalk' - styles game functions
      * @param {Object} gameState - Game state current object
      * @param {Object} game.you - Details of our snake
      * @param {Array.<{x: number, y:number}>} - Coorditates of snakes body - gameState.you.body
@@ -15,24 +14,22 @@
      * });
      * // Return: {x:1 , y:1}
 */
-import chalk from 'chalk';
-// By importing chalk we can use its funtions
-//  to add colors and style 
+function manhattan_food(gameState) {
+    if (!gameState?.board?.food?.length) return null; 
 
-function manhattan_food(gameState){
     const myHead = gameState.you.body[0];
-    let minimum_distance=100000;
-    let minimum_food=null;
+    let minimum_distance = Infinity; 
+    let minimum_food = null;
+
     gameState.board.food.forEach(food => {
-        foodPositions.set(`${food.x},${food.y}`, chalk.bgHex('#ff9671')('F')); // Mark food with 'F' at the position (x,y)
-        let manhattan_distance=Math.abs(myHead.x-food.x)+Math.abs(myHead.y-food.y); //The difference of the absolute values ​​of x plus the difference of the absolute values ​​of y of the two points(The head and each food are the two points)
-        if(manhattan_distance<minimum_distance){
-            minimum_food=food;
-            minimum_distance=manhattan_distance; 
+        const distance = Math.abs(myHead.x - food.x) + Math.abs(myHead.y - food.y);
+        if (distance < minimum_distance) {
+            minimum_distance = distance; 
+            minimum_food = food;
         }
     });
 
     return minimum_food;
 }
 
-export default manhattan_food;
+export { manhattan_food };
