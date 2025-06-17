@@ -8,18 +8,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+
+## [1.2.0] - 2025-06-18
+
+Minor release the 1.2.0 version - This release 
+introduces new features, improvements, code documentation, optimisation,
+configurations and generation of files.
+
 ## Added 
 - JSDoc markup language code documentation to instuct operations that annotate our code and alleviate any possibe inconsistencies. Additionaly, we generated an html documentation page for each logical function, inside the folder (`jsdocs/`) to autometically display and organize the code's structure including description [#56](https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/56). 
-- JSDoc configuration (`jsdoc.config.json`) to enforce documentation standards and autogenerate (`jsdocs/`) .
-- Updated the README.md by adding relavant documentation required for the project's system documentation. [#57](https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/57).
-- Snake can hunt smaller snakes and kill them. [#58](https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/58). 
+- JSDoc configuration (`jsdoc.config.json`) to enforce documentation standards and autogenerate (`jsdocs/`).
+- Updated the README.md by adding relavant documentation required for the project's system documentation [#57](https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/57).
+- Snake can hunt smaller snakes and kill them [#58](https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/58).
+- Created github actions that execute tests, lint code with eslint and prettier, check if the coverage is above 50% and deploy to railway [#59](https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/59).  
+- Dependabot security and vulnerability update [#60](https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/60).
+- Minor Release [#61] (https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/61).
 
 ## [1.1.0] - 2025-05-21
 
 ## Added
 
 Minor release the 1.1.0 version - This release 
-introduces new features, improvement, test coverage and a hotfix.
+introduces new features, improvements, test coverage and a hotfix.
 
 - Snake Movement Rules: Snakes can move safely into position occupied by the opponent's tail.[#41](https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/41).
 - Added Jest testing framework for code quality and efficiency [#42](https://github.com/ichatzivasileiadou/SDiP-Hissssteria/issues/42).
@@ -118,7 +128,8 @@ Major release the 1.0.0 version, a stable version product with important configu
 
 <!-- Compare Version Releases Links -->
 
-[unreleased]: https://github.com/ichatzivasileiadou/SDiP-Hissssteria/compare/v1.1.0...HEAD
+[unreleased]: https://github.com/ichatzivasileiadou/SDiP-Hissssteria/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/ichatzivasileiadou/SDiP-Hissssteria/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/ichatzivasileiadou/SDiP-Hissssteria/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/ichatzivasileiadou/SDiP-Hissssteria/compare/v0.5.0...v1.0.0
 [0.5.0]: https://github.com/ichatzivasileiadou/SDiP-Hissssteria/compare/v0.4.0...v0.5.0
