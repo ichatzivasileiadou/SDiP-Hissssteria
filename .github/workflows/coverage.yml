@@ -5,10 +5,13 @@ on:
             - main
             - develop
 jobs:
-    coverage:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v3
-            - uses: ArtiomTr/jest-coverage-report-action@v2
-              with:
-                test-script: npm test
+  coverage:
+    runs-on: ubuntu-latest
+    permissions:
+      checks: write  # Grant write permission for checks API
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ArtiomTr/jest-coverage-report-action@v2
+        with:
+          test-script: npm test
