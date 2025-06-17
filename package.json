@@ -13,8 +13,8 @@
     "format:check": "prettier --check .",
     "test:cov": "npm test -- --coverage",
     "test:watch": "npm test -- --watch",
-    "docs": "npm jsdoc -r index.js floodFill/floodFill.js head-to-head-mov.js manhattan-food.js snakes-movement-to-tail.js sum.js -d  jsdocs",
-    "docs-config": "npx jsdoc -c jsdoc.config.json -r"
+    "docs": "npx jsdoc index.js floodFill/floodFill.js head-to-head-mov.js manhattan-food.js snakes-movement-to-tail.js sum.js kill-small-snakes.js -d  jsdocs",
+    "docs-config": "npx jsdoc -c jsdoc.config.json"
   },
   "repository": {
     "type": "git",
