@@ -19,7 +19,6 @@
 
 function manhattan_food(gameState) {
     if (!gameState?.board?.food?.length) return null; 
-
     const myHead = gameState.you.body[0];
     let minimum_distance = Infinity; 
     let minimum_food = null;

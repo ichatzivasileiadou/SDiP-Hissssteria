@@ -33,7 +33,6 @@ describe('manhattan_food function', () => {
     
     // State the closest food returned both (1,1) 
     // and (5,5) are tracked in global food positions
-  
   });
 
   test('Handles ties by returning first closest food', () => {
