@@ -1,6 +1,6 @@
 {
   "name": "starter-snake-javascript",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "author": "BattlesnakeOfficial",
   "description": "An official Battlesnake template written in JavaScript. Get started at play.battlesnake.com.",
   "license": "MIT",
@@ -11,22 +11,27 @@
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "test:cov":"npm test -- --coverage",
-    "test:watch": "npm test -- --watch"
+    "test:cov": "npm test -- --coverage",
+    "test:watch": "npm test -- --watch",
+    "docs": "npx jsdoc index.js floodFill/floodFill.js head-to-head-mov.js manhattan-food.js snakes-movement-to-tail.js sum.js kill-small-snakes.js -d  jsdocs",
+    "docs-config": "npx jsdoc -c jsdoc.config.json"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BattlesnakeOfficial/starter-snake-javascript.git"
   },
   "dependencies": {
-    "express": "^4.20.0",
+    "chalk": "^5.4.1",
+    "express": "^5.1.0",
+    "jsdoc": "^4.0.4",
+    "save-dev": "^0.0.1-security",
     "starter-snake-javascript": "file:"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.1",
     "cross-env": "^7.0.3",
     "eslint": "^9.25.1",
-    "eslint-config-prettier": "^10.1.2",
+    "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-jest": "^28.11.0",
     "eslint-plugin-sonarjs": "^3.0.2",

@@ -1,0 +1,31 @@
+{
+  "plugins": ["plugins/markdown"],
+  "recurseDepth": 10,
+  "source": {
+    "include": [
+      "index.js",
+      "floodFill/floodFill.js",
+      "head-to-head-mov.js",
+      "manhattan-food.js",
+      "snakes-movement-to-tail.js",
+      "kill-small-snakes.js",
+      "sum.js"
+    ],
+    "includePattern": ".+\\.js(doc|x)?$",
+    "excludePattern": "" 
+  },
+  "opts": {
+    "destination": "jsdocs/",
+    "encoding": "utf8",
+    "recurse": false,   
+    "verbose": true
+  },
+  "templates": {
+    "cleverLinks": true,
+    "monospaceLinks": true,
+    "default": {
+      "outputSourceFiles": false
+    }
+  }
+  
+}
