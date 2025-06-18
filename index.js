@@ -64,6 +64,7 @@
  * @property {Function} end -  Handler of game end
  * 
  */
+
 import runServer from './server.js';
 import chalk from 'chalk';
 import {manhattan_food} from './manhattan-food.js';

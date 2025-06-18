@@ -23,6 +23,7 @@
  */
 
 
+
 // Returns the snake that its head is closest to my snakes head and the other snakes head is smaller than mine
 
 function manhattan_food(gameState) {

@@ -17,6 +17,7 @@
 // By importing chalk we can use its funtions
 //  to add colors and style 
 
+
 function manhattan_food(gameState) {
     if (!gameState?.board?.food?.length) return null; 
     const myHead = gameState.you.body[0];
